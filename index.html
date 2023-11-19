@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Words</title>
+</head>
+<body>
+
+<script>
+    // to Take input from the user
+    var userInput = prompt("Enter a sentence:");
+
+    // to Reverse every word in the sentence
+    var reversedSentence = reverseWords(userInput);
+
+    // to Display the result
+    alert("Reversed sentence: " + reversedSentence);
+
+    //this is a Function to reverse every word in a sentence
+    function reverseWords(sentence) {
+        var words = sentence.split(' ');
+
+        for (var i = 0; i < words.length; i++) {
+            words[i] = reverseString(words[i]);
+        }
+
+        return words.join(' ');
+    }
+
+    // this is Function to reverse a string
+    function reverseString(str) {
+        return str.split('').reverse().join('');
+    }
+</script>
+
+</body>
+</html>
